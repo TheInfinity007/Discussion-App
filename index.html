@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link type="text/css" href="./style.css" rel="stylesheet">
+
+    <title>Discussion App</title>
+</head>
+<body>
+	<header>
+		<h1>Discussion Portal</h1>
+	</header>
+	<div class="main-container">
+		<div class="container-left">
+			<div class="button-wrapper">
+				<button class="btn-add" id="show-welcome">New Question form</button>
+				<input type="text" name="search" id="search" class="search" placeholder="search questions . . .">
+				<button class="btn-add" id="show-favorites" style="margin-left:10px	">Favorites</button>
+			</div>
+			<div class="questions" id="questions">
+				<div class="que-item" id="1">
+					<h2 class="que-title">JSON & Web Storage</h2>
+					<p class="que-text">How to use web Storage</p>
+				</div>
+				<div class="que-item" id="2">
+					<h2 class="que-title">Web Development</h2>
+					<p class="que-text">What is Web?</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-right" id="right">
+			<div id="welcome">
+				<h1>Welcome to Discussion Portal !</h1>
+				<p class="text">Enter a subjct and question to get started</p>
+				<form id="formAdd">
+					<input type="text" name="subject" class="subject" placeholder="Subject" required="true"><br>
+					<textarea name="question" rows="6" placeholder="Question" required></textarea>
+					<div class="btn-submit"><button id="add-que" type="submit">Submit</button></div>
+				</form>
+			</div>
+			<div id="description">
+				<h2 class="text">Question</h2>
+				<div class="que-content">
+					<h2 class="que-title" id="que-title">Web Development</h2>
+					<p class="que-text" id="que-text">What is Web?</p>
+					<span class="fav">Fav</span>
+				</div>
+				<div class="resolve">
+					<div class="icons">
+						<i class="fa fa-thumbs-up" id="upvote" aria-hidden="true"></i>
+						<span id="votes"></span>
+						<i class="fa fa-thumbs-down" id="downvote" aria-hidden="true"></i>	
+						<i class="fa fa-heart" id="favorite" aria-hidden="true"></i>	
+					</div>
+					<button id="resolve">Resolve</button>
+				</div>
+				<div class="response-wrapper">
+					<h3 class="text">Response</h3>
+					<div class="responses" id="responses">
+						<div class="response">
+							<h3 class="res-name">Amit</h3>
+							<p class="res-text">Local storage can only save strings, so storing objects requires that they be turned into strings using JSON.</p>
+						</div>
+						<div class="response">
+							<h3 class="res-name">Amit</h3>
+							<p class="res-text">Local storage can only save strings, so storing objects requires that they be turned into strings using JSON.</p>
+						</div>
+					</div>
+					<div class="response-form">
+						<h2 class="text">Add Response</h2>
+						<form id="resForm">
+							<input type="text" name="subject" class="subject" placeholder="Enter Name" minlength="3" maxlength="20" required><br>
+							<textarea name="question" rows="4" placeholder="Enter Comment" maxlength="1000" required></textarea>
+							<div class="btn-submit"><button id="add-res">Submit</button></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="./script.js"></script>
+</body>
+</html>
